@@ -15,7 +15,7 @@ automaitcally when using this module:
 * Requests Received
 * Requests with Errors
 
-Calls to route will show the baseUrl and any subroutes independently.
+"Calls to route" will show the baseUrl and any subroutes independently.
 
 #### Timers
 Response Time for [ROUTE]
@@ -28,7 +28,7 @@ Install with NPM:
 $ npm i fh-express-stats --save
 ```
 
-Add to FeedHenry Express application. The _fh-mbaas-api dependency must 
+Add to FeedHenry Express application. The _fh-mbaas-api_ dependency must 
 be installed in your project to use this.
 
 ```javascript
