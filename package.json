@@ -1,6 +1,6 @@
 {
   "name": "fh-express-stats",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Adds out of the box statistics to a FeedHenry Cloud App",
   "main": "./index.js",
   "scripts": {
