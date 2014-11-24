@@ -1,0 +1,25 @@
+{
+  "name": "fh-express-stats",
+  "version": "0.0.0",
+  "description": "Adds default cloud application statistics.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fh",
+    "feedhenry",
+    "statistics",
+    "stats",
+    "$fh"
+  ],
+  "author": "Evan Shortiss",
+  "license": "MIT",
+  "devDependencies": {
+    "fh-mbaas-express": "~4.0.6",
+    "proxyquire": "~1.1.0",
+    "chai": "~1.10.0",
+    "fh-mbaas-api": "~4.6.0",
+    "xtend": "~4.0.0"
+  }
+}
