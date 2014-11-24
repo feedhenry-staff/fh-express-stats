@@ -1,7 +1,7 @@
 'use strict';
 
-var stats = require('fh-mbaas-api').stats
-  , util = require('util');
+var util = require('util')
+  , stats = null;
 
 var called = false;
 
@@ -15,13 +15,18 @@ var TRACKERS = {
 };
 
 
-module.exports = function getStatsMiddleware () {
+module.exports = function getStatsMiddleware (fh) {
   if (called) {
     throw new Error('Called fh-express-stats twice. This middleware can ' +
       'only be called once to ensure accurate statistics; ideally before ' +
       'your custom routes.');
+  } else if (!fh || !fh.stats) {
+    throw new Error('Please provide a valid FeedHenry API (fh-mbaas-api) ' +
+      'reference to the stats middleware. e.g:' +
+      'app.use(fhStats(require("fh-mbaas-api")))');
   } else {
     called = true;
+    stats = fh.stats;
     return statsMiddleware;
   }
 };

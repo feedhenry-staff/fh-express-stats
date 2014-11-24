@@ -6,14 +6,12 @@ var proxyquire = require('proxyquire')
   , expect = require('chai').expect
   , xtend = require('xtend');
 
-var expstats = proxyquire('../index.js', {
-  'fh-mbaas-api': {
-    stats: statsStub
-  }
-});
+var expstats = require('../index.js');
 
 // Get a middleware instance
-expstats = expstats();
+expstats = expstats({
+  stats: statsStub
+});
 
 var DEFAULT_RESULTS = {
   'Requests Received': 1,
