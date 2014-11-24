@@ -9,14 +9,16 @@ The following statistics will be added to the Statistics tab for your Cloud App
 automaitcally when using this module:
 
 #### Counters
-* Calls to route: [URL]
+* Calls to route: [ROUTE]
 * Open Requests
 * Requests Served
 * Requests Received
 * Requests with Errors
 
+Calls to route will show the baseUrl and any subroutes independently.
+
 #### Timers
-Response Time for [URL]
+Response Time for [ROUTE]
 
 
 ## Usage
@@ -26,8 +28,8 @@ Install with NPM:
 $ npm i fh-express-stats --save
 ```
 
-Add to FeedHenry Express application. The _fh-mbaas-express_ dependency must 
-be installed.
+Add to FeedHenry Express application. The _fh-mbaas-api dependency must 
+be installed in your project to use this.
 
 ```javascript
 var mbaasApi = require('fh-mbaas-api');
