@@ -48,7 +48,7 @@ app.use('/mbaas', mbaasExpress.mbaas);
 app.use(mbaasExpress.fhmiddleware());
 
 // Stats middleware can go here
-app.use(fhStats());
+app.use(fhStats(mbaasApi));
 
 // fhlint-begin: custom-routes
 app.use('/hello', require('./lib/hello.js')());
