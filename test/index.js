@@ -61,6 +61,12 @@ describe('FeedHenry Stats Middleware', function () {
   });
 
 
+  describe('Async behaviour', function () {
+    it('Call the "next" middleware callback', function (done) {
+      expstats(req, res, done);
+    });
+  });
+
   describe('TOTAL_REQ_RECIEVED', function () {
     it('Should track the number of requests received', function () {
       reqBatch(5);

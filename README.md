@@ -63,3 +63,11 @@ var server = app.listen(port, function() {
 });
 
 ```
+
+## Contributing
+Add any new statistics you think would be useful! 
+
+Simply run _npm test_ to run tests from the root directory.
+
+Stubs are used for testing, take a look at the test file and it should be clear 
+how they work.
